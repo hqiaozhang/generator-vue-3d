@@ -1,0 +1,95 @@
+/*时间轴样式*/
+
+/*控制按钮*/
+.progTime_btnpaly{float:left;width:40px;height:20px;position:relative; margin-top: 8px;}
+/*.progTime_btnpaly:before { content: ''; width: 68px; height: 6px; background-color: #32a3f8; position: absolute; left: 0; top: -6px; }
+.progTime_btnpaly:hover:after { border-left-color: #ccc; }*/
+.paly-btn,.changeChars-btn{cursor:pointer;left:3px;width:19px;height:19px;display:inline-block;position:relative;}
+.paly-btn{background:url(../images/timeProgress/play.png) no-repeat center;}
+.changeChars-btn{background:#fff url(../images/timeProgress/stop.png) no-repeat center;}
+.progTime{color:#fff;width:calc(100% - 80px);padding-top:10px;padding-bottom:0px;display:none;position:relative;float:left;}
+.progTime_concent{width:100%;height:36px;margin:0 auto;cursor:pointer;position:relative;}
+.scrollBarBox{width:100%;height:45px;padding:5px 0;position:absolute;top:-11px;background-color:transparent;z-index:2;}
+.scrollBar{width:100%;height:40px;cursor:pointer;position:absolute;top:7px;border-radius:20px;}
+.timecode{width:56px;height:20px;background-color:#666;position:absolute;left:0;top:-30px;color:#fff;text-align:center;cursor:pointer;display:none;line-height:20px; opacity: 0.9;transition:all ease-in-out .25s;}
+.timecode:after{content:'';width:0;height:0;border:5px solid transparent;border-top:5px solid #777672;position:absolute;left:50%;bottom:-10px;margin-left:-5px;}
+.scroll_Track{width:3px;height:15px;background-color:#0080eb;transition:all ease-in-out .25s; margin-left: -1px;}
+.scroll_Thumb{height:20px;width:50px;text-align:center;line-height:20px;background:#0080eb;position:absolute;left:-2px;margin-top:-24px;cursor:pointer;color:#fff;font-size:12px;transition:all ease-in-out .25s;}
+/*.scroll_Thumb:after{content:'';width:0;height:0;border:5px solid transparent;border-top:5px solid #0080eb;position:absolute;left:19px;bottom:-10px;}*/
+.time_slot .time-dayVal{position: relative;float:left;line-height:36px;width:calc(20% - 1px);margin:3px 0 0 0;cursor:pointer;font-size:12px;}
+.time-dayVal .month-day{display:inline-block; clear: both; margin-left: -7px; text-align: left; color: #fff; }
+.time-dayVal .time-scale span{display:inline-block;float: left; background:#f60 url(../images/timeProgress/hourline.png) no-repeat; margin-top: 1px; text-align: left; text-indent: -16px;}
+
+.time-dayVal .time-scale span.bigline{ height: 8px; text-align: left; background:url(../images/timeProgress/fourhourline.png) no-repeat; margin-top: -1px;}
+.time-dayVal .time-scale span.shortline{ height: 4px; text-align: left; background:url(../images/timeProgress/hourline.png) no-repeat;}
+.time-dayVal .time-scale span.bigline:first-child{ height: 8px; text-align: left;}
+
+.week-day{line-height:20px;clear: both; text-align: left; color: #fff; margin-left: -9px; font-size: 12px;}
+.hours-8,
+.hours-16{ 
+    position: absolute;
+    left: calc(4.16667% * 6.7);
+    color: #bbbdc4;
+    font-size: 12px;
+    top: -5px;
+}
+.hours-16 {
+  left: calc(4.16667% * 14.8);
+}
+.timeline-progres,.timepanel-progres{width:100%;position:absolute;bottom:0;left:0;}
+.timeline-progres{z-index:1;height: 45px; left: 10px; right: 10px; z-index: 9;background: url(../images/timeProgress/timebg.png);}
+.timepanel-progres{height:265px;z-index:9;}
+.timepanel-progres .progTime_btnpaly{margin-top:36px;background:#fafbfd;height:236px;}
+.timepanel-progres .week-day{line-height:16px;border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;}
+.timepanel-progres .tptext-list{margin-top:16px;}
+.timepanel-progres .tptext-list span{width:58px;height:31px;line-height:31px;display:block;padding-left:10px;}
+.timepanel-progres .pollutiond-list{display:inline-block;width:calc(12.5% - 0px);float:left;}
+.timepanel-progres .pollutiond-list span{display:inline-block;height:31px;line-height:31px;text-align:center;color:#333;width:100%;text-align:left;}
+.timepanel-progres .progTime{overflow-x:auto;overflow-y:hidden;padding-top:40px; background: url(../images/timeProgress/ptlinebg.jpg) repeat-x 0 44px;}
+.timepanel-progres .scrollBarBox{top:18px;width:2074px;}
+.timepanel-progres .scrollBar{width:2074px;top:-22px;}
+.timepanel-progres .timecode{top:-28px;}
+.timepanel-progres .scroll_Thumb{ margin-top: -39px;left: -11px; width: 90px;}
+.timepanel-progres .scroll_Thumb:after { content: ''; width: 0; height: 0; border: 5px solid transparent; border-top: 5px solid #ffbe00; position: absolute; left: 8px; bottom: -10px;}
+.time-dataShowc{position:absolute;top:0;left:0;z-index:1;height:193px;}
+.time-datachart{position:absolute;top:0;left:0;z-index:0;height:193px;width:100%;}
+.scrollData{height:183px;}
+.currTime_line{position:absolute;top:-8px;border-top:solid 4px #fff; margin-left: -2px;  border-left: solid 3px transparent; border-right: solid 3px transparent;   z-index:999999;}
+
+@media screen and (max-width: 1440px) {
+  .hours-8 {
+    left: calc(4.16667% * 6);
+  }
+  .hours-16 {
+    left: calc(4.16667% * 14);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hours-8 {
+    left: calc(4.16667% * 5.6);
+  }
+  .hours-16 {
+    left: calc(4.16667% * 13.9);
+  }
+}
+
+.map-prog-bottom .timeControl, 
+.map-prog-bottom .dateinput {
+  right: 15px;
+  bottom: 20px;
+  top: 9px;
+  z-index: 999;
+  position: absolute;
+}
+.map-prog-bottom .timeControl {
+  cursor: pointer;
+  width: 16px;
+  height: 17px;
+  background: url(../images/timeProgress/time.png) no-repeat;
+}
+.map-prog-bottom .dateinput {
+  width: 243px;
+  color: #fff;
+  opacity: 0;
+  height: 0;
+}

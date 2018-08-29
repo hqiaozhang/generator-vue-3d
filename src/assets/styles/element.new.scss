@@ -1,0 +1,11 @@
+/*element 样式公用样式重置*/
+
+.el-message{
+  min-width: 100px;
+  background-color: #000;
+  filter: alpha(opacity=60);
+  background-color: rgba(0,0,0,.6);
+  color: #fff;
+  border: none;
+  top: 50%;
+}

@@ -1,0 +1,61 @@
+.h5-title-common {
+  height: 26px;
+  line-height: 22px;
+  color: #E5E6EA;
+  text-align: center;
+  padding: 1px 10px;
+  position: relative;
+  display: inline-block;
+  .content {
+    font-size: 12px;
+    margin: 0 -6px 0 -9px;
+    padding: 0 15px;
+    height: 21px;
+  }
+  span {
+    display: block;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+  }
+  .icon-lefttop{
+    background: url(./images/iconBlue-lefttop.png) no-repeat;
+    top: 0;
+    left: 0;
+  }
+  .icon-leftbottom{
+    background: url(./images/iconBlue-leftbottom.png) no-repeat;
+    bottom: 0;
+    left: 0;
+  }
+  .icon-righttop{
+    background: url(./images/iconBlue-righttop.png) no-repeat;
+    right: 0;
+    top: 0;
+  }
+  .icon-rightbottom{
+    background: url(./images/iconBlue-rightbottom.png) no-repeat;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/*蓝色主题*/
+.theme-blue {
+  .h5-title-common {
+    .content {
+      background: #172757;
+    }
+  }
+  
+}
+
+/*绿色主题*/
+.theme-green {
+  .h5-title-common {
+    .content {
+      background: #a0a5b9;
+      color: #fff;
+    }
+  }
+}

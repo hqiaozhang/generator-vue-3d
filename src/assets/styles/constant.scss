@@ -1,0 +1,45 @@
+/*常量定义（颜色，字体大小、宽...）*/
+
+/*蓝色皮肤污染等级颜色定义*/
+$blueLeve10Color: #cecece;
+$blueleve1lColor: #9dfc7c;
+$blueleve12Color: #fbfe29;
+$blueleve13Color: #ff8f43;
+$blueleve14Color: #fe5769;
+$blueleve15Color: #a4036d;
+$blueleve16Color: #7E0023;
+
+/*绿色皮肤污染等级颜色定义*/
+$greenLeve10Color: #cecece;
+$greenleve1lColor: #77E750;
+$greenleve12Color: #FFDF02;
+$greenleve13Color: #F67825;
+$greenleve14Color: #F93148;
+$greenleve15Color: #E3008C;
+$greenleve16Color: #690000;
+
+/*绿色主题字体颜色*/
+$greenfc1: #a4a4a4; // a4a4a4字体颜色
+
+/*宽度定义*/
+$w300: 300px;
+$top50: 50px;
+
+// 字体大小定义
+$fs12: 12px;
+
+@mixin w300 {
+  width: $w300;
+  top: $top50;
+  z-index: 2;
+}
+
+// .theme(@backcolor:#EEA2AD,@fcolor:#fff) {
+//   .header {
+//     color: @fcolor;
+//     background: @backcolor;
+//     width: 100%;
+//     height: 2rem;
+//     position: relative;
+//   }
+// }

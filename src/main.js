@@ -4,7 +4,7 @@
  * @Email: 991034150@qq.com 
  * @Description: 入口文件
  * @Last Modified by: zhanghongqiao
- * @Last Modified time: 2018-08-29 14:31:17
+ * @Last Modified time: 2018-08-31 10:22:20
  */
 
 import Vue from 'vue'
@@ -13,9 +13,9 @@ import router from './router'
 import store from './store'
 import _ from 'lodash'
 import elementUI from 'element-ui'
-import $ from 'jquery'
+ 
 import './assets/styles/index.scss'
-import aframe from 'aframe'
+import aframe from 'aframe' 
 
 // 渲染前处理(引入所有API)
 import preLoader from './util/loader/loader'
@@ -29,24 +29,7 @@ preLoader.load({
   apis: mockAPI
 })
 
-// 修改页面标题
-let title = '蛙鸣科技 | '
-router.beforeEach((to, from, next) => {
-  document.title =  title + to.name;
-  next()
-})
-
-// 获取皮肤主题
-let theme = localStorage.getItem('theme')
-// 判断是否有设置默认皮肤(蓝色皮肤)
-if(!theme) {
-  localStorage.setItem('theme', 'blue')
-}else {
-  localStorage.setItem('theme', theme)
-}
-// 设置默认皮肤
-$('body').attr('class', `theme-${theme}`)
-
+ 
 
 // 注册elementUI
 Vue.use(elementUI)
@@ -65,3 +48,8 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+// ================= 启用热加载=============
+if(module.hot) {
+  module.hot.accept()
+}

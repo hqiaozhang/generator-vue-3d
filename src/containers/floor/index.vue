@@ -4,7 +4,7 @@
  * @Email: 991034150@qq.com 
  * @Description: 楼宇
  * @Last Modified by: zhanghongqiao
- * @Last Modified time: 2018-08-31 15:16:48
+ * @Last Modified time: 2018-09-03 10:02:57
  */
 
 <style lang="scss" scoped>
@@ -16,13 +16,14 @@
   
  <template>
    <div class="floor-container">
-     <ImageGallery />
+     <!-- <ImageGallery /> -->
+     <AframeLogo />
    </div>
  </template>
 
 
 <script>
-import {ImageGallery} from "./components/index.js";
+import {ImageGallery, AframeLogo} from "./components/index.js";
 
 export default {
   data() {
@@ -31,7 +32,8 @@ export default {
     };
   },
   components: {
-    ImageGallery
+    ImageGallery,
+    AframeLogo
   },
 
   mounted() {

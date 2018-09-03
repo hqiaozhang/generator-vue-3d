@@ -7,16 +7,17 @@
     <!-- 盒子 -->
     <!-- <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box> -->
       <a-assets>
-        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        <img id="city" :src="`http://${location.host}/static/images/3.jpg`">
       </a-assets>
-      <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-        <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
-          repeat="indefinite"></a-animation>
-      </a-box>
-
+      <a-entity position="0 2 -5" rotation="5 30 25">
+        <a-box src="#city" >
+          <!-- <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+            repeat="indefinite"></a-animation> -->
+        </a-box>
+      </a-entity>
       <!-- 添加相机后才能有点击事件 -->
       <a-camera>
-        <a-cursor color="#fff"></a-cursor>
+        <a-cursor color="red"></a-cursor>
       </a-camera>
       <!-- ==================== -->
       
@@ -28,12 +29,17 @@
 <script>
 
 export default {
+  data() {
+    return {
+      location: location
+    }
+  },
   mounted() {
     var boxEl = document.querySelector("a-box");
-    boxEl.addEventListener("click", function() {
-      console.log('xxxxxxxxx')
-      boxEl.setAttribute("scale", { x: 3, y: 3, z: 3 });
-    });
+    // boxEl.addEventListener("click", function() {
+    //   console.log('xxxxxxxxx')
+    //   boxEl.setAttribute("scale", { x: 3, y: 3, z: 3 });
+    // });
   },
   methods: {}
 };

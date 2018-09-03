@@ -12,8 +12,9 @@ module.exports = merge(common, {
   entry: {
     main:[
     　　'webpack-hot-middleware/client', // 热加载
+        'webpack/hot/dev-server',
     　　'./src/main.js'
-    　　],
+    　],
     },
   mode: 'development', // 开发环境
   devtool: 'inline-source-map', // 原始源代码

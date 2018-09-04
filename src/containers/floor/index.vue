@@ -4,7 +4,7 @@
  * @Email: 991034150@qq.com 
  * @Description: 楼宇
  * @Last Modified by: zhanghongqiao
- * @Last Modified time: 2018-09-03 21:51:34
+ * @Last Modified time: 2018-09-04 10:44:42
  */
 
 <style lang="scss" scoped>
@@ -17,7 +17,8 @@
  <template>
    <div class="floor-container">
      <!-- <ImageGallery /> -->
-     <item2 />
+     <!-- <item2 /> -->
+     <Building />
    </div>
  </template>
 

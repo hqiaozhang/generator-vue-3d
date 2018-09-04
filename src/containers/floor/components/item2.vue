@@ -9,11 +9,13 @@
       <a-assets>
         <img id="city" :src="`http://${location.host}/static/images/3.jpg`">
       </a-assets>
-      <a-entity position="0 2 -5" rotation="5 30 25">
-        <a-box src="#city" >
-          <!-- <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
-            repeat="indefinite"></a-animation> -->
+      <a-sky :src="`http://${location.host}/static/images/room.jpg`"></a-sky>
+      <a-entity>
+        <a-box src="#city"  position="0 1 -4" rotation="0 45 0">
+          <a-animation attribute="rotation"  to="0 360 0"  dur="5000"
+            repeat="indefinite"></a-animation>
         </a-box>
+        <a-box src="#city"  position="-2 1 -4" rotation="45 0 0" />>
       </a-entity>
       <!-- 添加相机后才能有点击事件 -->
       <a-camera>
@@ -36,10 +38,12 @@ export default {
   },
   mounted() {
     var boxEl = document.querySelector("a-box");
-    // boxEl.addEventListener("click", function() {
-    //   console.log('xxxxxxxxx')
-    //   boxEl.setAttribute("scale", { x: 3, y: 3, z: 3 });
-    // });
+    var camera = document.querySelector('a-entity[camera]')
+    console.log('camera', camera)
+    boxEl.addEventListener("click", function() {
+      console.log('xxxxxxxxx')
+      // boxEl.setAttribute("scale", { x: 3, y: 3, z: 3 });
+    });
   },
   methods: {}
 };
